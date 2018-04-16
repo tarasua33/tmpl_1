@@ -1,0 +1,80 @@
+/*basic styles for page + SIDEBAR*/
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #e3e3e3;
+  height: 100%;
+  -webkit-font-smoothing: antialiased; /**для глакого шрифта на мобільних пристроях*/
+  -webkit-overflow-scrolling: touch; /*для скролінга тачем*/
+}
+h2 {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+}
+
+.wrapperPage {
+  height: 100%;
+  font-size: 0;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  width: 300px;
+  display: inline-block;
+  float: left;
+  min-height: 100%;
+  background: #242b2e;
+  box-shadow: 0 0 51px black;
+}
+.sidebarTarget {
+  display: none;
+}
+
+.contentPage {
+  margin-left: 300px;
+}
+
+@media screen and (max-width: 750px) {
+  .sidebar {
+    display: none;
+    position: absolute;
+    z-index: 3;
+  }
+  .sidebarTarget {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    font-size: 30px;
+    display: inline-block;
+    z-index: 4;
+    line-height: 1;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    background-image: -moz-linear-gradient( 90deg, #2e363a 0%, #1ab5b3 100%);
+    background-image: -webkit-linear-gradient( 90deg, #2e363a 0%, #1ab5b3 100%);
+    background-image: -ms-linear-gradient( 90deg, #2e363a 0%, #1ab5b3 100%);
+    background-image: -o-linear-gradient( 90deg, #2e363a 0%, #1ab5b3 100%);
+    span {
+      cursor: pointer;
+    }
+  }
+
+  .contentPage {
+    margin-left: 0;
+  }
+}
