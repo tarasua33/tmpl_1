@@ -25,6 +25,8 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "jquery": "^3.3.1"
+    "isotope-layout": "^3.0.6",
+    "jquery": "^3.3.1",
+    "simple-lightbox": "^1.2.9"
   }
 }

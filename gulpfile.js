@@ -35,10 +35,11 @@ gulp.task("js:app", function () {
         .pipe(gulp.dest("dist/js"))
 });
 
-/**tasks concat vendor css and fonts(bootstrap)**/
+/**task concat vendor css and fonts(bootstrap, simpleBox)**/
 gulp.task("styles:vendor", function () {
     return gulp.src([
-        "node_modules/bootstrap/dist/css/bootstrap.min.css"
+        "node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "node_modules/simple-lightbox/dist/simpleLightbox.min.css"
     ])
         .pipe(plugins.concat("vendor.min.css"))  // concat and rename bootstrap css file
         .pipe(gulp.dest("dist/css"))
@@ -48,18 +49,31 @@ gulp.task("fonts:vendor", function () {
     return gulp.src(["node_modules/bootstrap/dist/fonts/*"])
         .pipe(gulp.dest("dist/fonts"))
 });
-/*JQUERY JS*/
+/*JS JQUERY*/
 gulp.task("js:vendor", function () {
     return gulp.src(["node_modules/jquery/dist/jquery.min.js"])
         .pipe(plugins.concat("vendor.min.js"))
         .pipe(plugins.uglify(""))
         .pipe(gulp.dest("dist/js"))
 });
-
-/**Filter ISOTOPE**/
+/*JS BOOTSTRAP*/
+gulp.task("js:vendorBootstrap", function () {
+    return gulp.src(["node_modules/bootstrap/dist/js/bootstrap.min.js"])
+        .pipe(plugins.concat("vendor_bootstrap.min.js"))
+        .pipe(plugins.uglify(""))
+        .pipe(gulp.dest("dist/js"))
+});
+/**JS Filter ISOTOPE**/
 gulp.task("js:filter", function () {
-    return gulp.src(["src/scriptIsotope/isotope.js"])
+    return gulp.src(["node_modules/isotope-layout/dist/isotope.pkgd.min.js"])
         .pipe(plugins.concat("isotope.min.js"))
+        .pipe(gulp.dest("dist/js"))
+});
+/*JS SimpleBOX*/
+gulp.task("js:vendorSimpleBox", function () {
+    return gulp.src(["node_modules/simple-lightbox/dist/simpleLightbox.min.js"])
+        .pipe(plugins.concat("vendor_simpleBox.min.js"))
+        .pipe(plugins.uglify(""))
         .pipe(gulp.dest("dist/js"))
 });
 
@@ -84,7 +98,9 @@ gulp.task("build", ["del"],  function () {
         "fonts:vendor",
         "img",
         "js:vendor",
+        "js:vendorBootstrap",
         "js:filter",
+        "js:vendorSimpleBox",
         "js:app"
     ]);
 });
