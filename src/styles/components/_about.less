@@ -1,0 +1,273 @@
+/*Styles for PAGE ABOUT*/
+
+.about {
+  padding: 25px;
+  h4 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  &-container {
+    background: white;
+    &-row {
+      &-col {
+        background: white;
+        padding: 30px;
+        &-block1 {
+          &-head {
+            &-pic {
+              width: 100%;
+            }
+          }
+          &-subCont {
+            padding: 0;
+            &-headBlock {
+              .styleText(24pt,300);
+              color: black;
+            }
+            &-text {
+              .styleText(18pt,300);
+            }
+          }
+          &-ourStaff {
+            &-headBlock {
+              .styleText(24pt,300);
+              color: black;
+            }
+            &-images {
+              padding: 0;
+              &>div:first-child {
+                padding-bottom: 20px;
+              }
+              &-block {
+                padding-left: 10px;
+                padding-right: 10px;
+                height: 100%;
+
+                &:hover .about-container-row-col-block1-ourStaff-images-block-hoverBlock {
+                  height: 100%;
+                }
+                .helperHover {
+                  position: relative;
+                }
+                &-hoverBlock {
+                  transition: height 1s;
+                  -webkit-transition: height 1s;
+                  -moz-transition:height 1s;
+                  -o-transition:height 1s;
+                  top: 0;
+                  left: 15px;
+                  width: 100%;
+                  height: 0;
+                  background: #1ab5b3;
+                  opacity: 0.9;
+                  position: absolute;
+                  overflow: hidden;
+                  &-title {
+                    .styleText(16pt,800);
+                    color: white;
+                    text-transform: uppercase;
+                    text-align: center;
+                    .textAlignCentr;
+                    margin: 0;
+                    padding: 0;
+                    line-height: 1;
+                    margin-top: 10px;
+                  }
+                  &-text {
+                    .styleText(13pt,100);
+                    line-height: 1;
+                    color: white;
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
+                    .textAlignCentr;
+                  }
+                }
+                &-pic {
+                  width: 100%;
+                  height: auto;
+                }
+                &-you {
+                  top: 0;
+                  left: 15px;
+                  width: 100%;
+                  height: 100%;
+                  background: #ebebeb;
+                  position: absolute;
+                  z-index: 3;
+                  text-align: center;
+                  .verticalAlign();
+                  &-title {
+                    .styleText(24pt,100);
+                    text-transform: uppercase;
+                    color: black;
+                    background: white;
+                    display: inline-block;
+                    border-radius: 10px;
+                    padding: 18px;
+                    margin: 0;
+                    vertical-align: middle;
+                    transition: .3s;
+                    cursor: pointer;
+                    &:hover {
+                      background: #b4b7b8;
+                      color: white;
+
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &-block2 {
+          &-info {
+            &-headBlock {
+              margin-top: 0!important;
+              font-size: 24pt;
+              font-family: 'Roboto', sans-serif;
+              font-weight: 300;
+              color: black;
+            }
+            &-text {
+              font-size: 14pt;
+              font-family: 'Roboto', sans-serif;
+              font-weight: 300;
+              padding-bottom: 10px;
+              padding-top: 10px;
+              border-bottom: solid 1px #e5e5e5;
+              span {
+                text-align: center;
+                font-size: 12pt;
+                padding-top: 5px;
+                color: #1ab5b3;
+                margin-right: 14px;
+                display: inline-block;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                border: solid 1px #1ab5b3;
+              }
+            }
+          }
+          &-testimonials {
+            &-headBlock {
+              .styleText(24pt, 300);
+              color: black;
+            }
+            .media {
+              background: #1ab5b3;
+            }
+            .media-left {
+              padding: 0;
+            }
+            .media-heading {
+              vertical-align: middle;
+              display: inline-block;
+              .styleText(15pt,500);
+              font-style: italic;
+              color: white;
+              padding-left: 23px;
+            }
+          }
+          &-services {
+            ul {
+              font-size: 14pt;
+              color: #848484;
+            }
+            &-headBlock {
+              .styleText(24pt,300);
+              color: black;
+            }
+            &-text {
+              .styleText(14pt,300);
+              padding-bottom: 10px;
+              padding-top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*Styles for progress bar */
+.mainProgress {
+  background: #e2e2e2;
+  color: black;
+}
+
+@media screen and (max-width: 1350px) {
+  .about {
+    &-container {
+      &-row {
+        &-col {
+          &-block1 {
+            &-ourStaff {
+              &-images {
+                &-block {
+                  &-hoverBlock {
+                    &-title {
+                      font-size: 12pt;
+                    }
+                    &-text {
+                      font-size: 9pt;
+                    }
+                  }
+                  &-you {
+                    &-title {
+                      font-size: 14pt;
+                      padding: 10px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about {
+    &-container {
+      &-row {
+        &-col {
+          &-block1 {
+            &-ourStaff {
+              &-images {
+                &-block {
+                  &-hoverBlock {
+                    &-title {
+                      font-size: 8pt;
+                    }
+                    &-text {
+                      font-size:5pt;
+                    }
+                  }
+                  &-you {
+                    &-title {
+                      font-size: 14pt;
+                      padding: 5px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &-block2 {
+            &-testimonials {
+              &-headBlock {
+              }
+              .media-heading {
+                font-size: 10pt;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

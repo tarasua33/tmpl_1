@@ -6,4 +6,7 @@ $(function () {
     if (document.location.href ==="http://localhost:3000/work.html") {
         $("#work").addClass("isActiveItem");
     }
+    if (document.location.href ==="http://localhost:3000/about.html") {
+        $("#about").addClass("isActiveItem");
+    }
 });
