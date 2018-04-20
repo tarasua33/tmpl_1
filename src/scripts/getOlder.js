@@ -1,3 +1,5 @@
+/*script for open OlderArticles on page BLOG*/
+
 var currentItemVisible = 15;
 
 openOlderArticles();
