@@ -9,4 +9,7 @@ $(function () {
     if (document.location.href ==="http://localhost:3000/about.html") {
         $("#about").addClass("isActiveItem");
     }
+    if (document.location.href ==="http://localhost:3000/blog.html") {
+        $("#blog").addClass("isActiveItem");
+    }
 });
