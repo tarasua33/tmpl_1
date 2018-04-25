@@ -1,0 +1,60 @@
+.contact {
+  position: relative;
+  height: 100%;
+  padding-top: 25px;
+  padding-left: 25px;
+  &-maps {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  &-feedBack {
+    padding: 30px;
+    background: white;
+    &-desc {
+      &-header {
+        .styleText(24pt,300);
+        color: black;
+      }
+      &-text {
+        .styleText(18pt,300);
+      }
+    }
+    &-form {
+      .styleText(14pt,300);
+      &-col {
+        & span {
+          border: 1px solid #1ab5b3;
+          border-radius: 50%;
+          .styleText(12pt,500);
+          color: #1ab5b3;
+          width: 30px;
+          height: 30px;
+          padding-top: 6px;
+        }
+        &-second {
+          padding-left: 20px;
+          &-butt {
+            width: 100%;
+            border-radius: 0;
+            background: #1ab5b3;
+            .styleText(14pt,300);
+            text-transform: uppercase;
+            color: white;
+          }
+        }
+
+        &-label {
+          border-radius: 0;
+          background: white;
+        }
+        &-input {
+          border-radius: 0;
+          height: 45px;
+        }
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@ $(function () {
             if ($(this).css("display") === "none") {
                 $(this).removeAttr("style");
             }
+            window.scrollTo(0,0);
         })
     });
 
